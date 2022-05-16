@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+
+</head>
+<body>
+  <h1>People Entered:</h1>
+  <h2 id="count-el">0</h2>
+  <button id="increment-btn" onclick="increment()">INCREMENT</button>
+  <br>
+  <button id="save-btn" onclick="save()">SAVE</button>
+  <p id="save-el">Previous Entries: </p>
+  <p>🤩</p>
+
+  <script>
+
+    let count = 0
+    let countEl = document.getElementById("count-el");
+    function increment() {
+      count += 1
+      countEl.textContent = count
+    }
+
+    function save() {
+      let saveEl = document.getElementById("save-el")
+      let countStr = count + " - "
+      saveEl.textContent += countStr
+      countEl.textContent = 0
+      count = 0
+    }
+   
+  </script>
+</body>
+</html>
